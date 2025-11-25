@@ -43,6 +43,7 @@ async function getKomikById(req, res) {
 async function updateKomik(req, res) {
     try {
         const komikData = req.body;
+        const id = req.params.id;
 
         if (req.file) {
             komikData.imageType = req.file.mimetype;
